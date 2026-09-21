@@ -51,13 +51,7 @@ def consultar_resumo():
     
     return jsonify(resposta), 200
 
-# Rota para retornar todas as temperaturas registradas
-@app.route('/sensores/clima/temperaturas', methods=['GET'])
-def obter_temperaturas():
-    if len(leituras_temperatura) == 0:
-        return jsonify({"mensagem": "Nenhuma leitura registrada ainda"}), 404
-    else:
-        return jsonify(leituras_temperatura), 200
+
 
 
 if __name__ == '__main__':
